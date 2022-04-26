@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "venus.mqtt-dbus-meter",
+			"path": "../Victron/venus.mqtt-dbus-meter"
+		},
+		{
+			"name": "solaredge-dbus-meter",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.yaml": "home-assistant"
+		}
+	}
+}

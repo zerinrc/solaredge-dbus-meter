@@ -4,31 +4,22 @@ Integrate SolarEdge meter into [Victron Energies Venus OS](https://github.com/vi
 **Not documented yet**. Based on https://github.com/fabian-lauer/dbus-shelly-3em-smartmeter
 
 ## Purpose
-With the scripts in this repo it should be easy possible to install, uninstall, restart a service that connects the Shelly 3EM to the VenusOS and GX devices from Victron.
-Idea is pasend on @RalfZim project linked below.
-
-
-
-## Inspiration
-This project is my first on GitHub and with the Victron Venus OS, so I took some ideas and approaches from the following projects - many thanks for sharing the knowledge:
-- https://github.com/RalfZim/venus.dbus-fronius-smartmeter
-- https://github.com/victronenergy/dbus-smappee
-- https://github.com/Louisvdw/dbus-serialbattery
-- https://community.victronenergy.com/questions/85564/eastron-sdm630-modbus-energy-meter-community-editi.html
+The pourpose of this software is to integrate my SolarEdge HD-Wave SE6000H with my Victron MultiPlus II without using an additional energy meter.
 
 
 
 ## How it works
 ### My setup
-- Shelly 3EM with latest firmware (20220209-094824/v1.11.8-g8c7bb8d)
-  - 3-Phase installation (normal for Germany)
-  - Connected to Wifi netowrk "A"
-  - IP 192.168.2.108/24  
-- Victron Energy Cerbo GX with Venus OS - Firmware v2.84
-  - No other devices from Victron connected (still waiting for shipment of Multiplus-2)
-  - Connected to Wifi netowrk "A"
-  - IP 192.168.2.110/24
+- SolarEdge HD-Wave SE6000H
+- Victron MultiPlus II 50000
+- Raspberry Pi 3 Model B runing Venus OS
+- RS485 CAN HAT for Raspberry
+- Custom 3D printed case for Raspberry + HAT + RJ45
+- Pylotech batts
 
+
+to be completed...
+-----
 ### Details / Process
 As mentioned above the script is inspired by @RalfZim fronius smartmeter implementation.
 So what is the script doing:

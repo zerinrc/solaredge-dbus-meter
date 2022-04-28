@@ -16,6 +16,9 @@ The pourpose of this software is to integrate my SolarEdge HD-Wave SE6000H with 
 - RS485 CAN HAT for Raspberry
 - Custom 3D printed case for Raspberry + HAT + RJ45
 - Pylotech batts
+- modbus-proxy on docker container for multiple connections to SE inverter
+
+
 
 
 to be completed...

@@ -127,19 +127,7 @@ class DbusSolarEdgePVInverterService:
        self._dbusservice['/Ac/L1/Current'] = (meter_data['l1_current']*(10**meter_data['current_scale']))
        self._dbusservice['/Ac/L1/Power'] =  (meter_data['power_ac']*(10**meter_data['power_ac_scale']))
        self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['energy_total']*(10**meter_data['energy_total_scale']))/1000
-      #  self._dbusservice['/Ac/L2/Energy/Forward'] = (meter_data['l2_import_energy_active']*(10**meter_data['energy_active_scale']))/1000
-      #  self._dbusservice['/Ac/L3/Energy/Forward'] = (meter_data['l3_import_energy_active']*(10**meter_data['energy_active_scale']))/1000
-      #  self._dbusservice['/Ac/L1/Energy/Reverse'] = (meter_data['l1_export_energy_active']*(10**meter_data['energy_active_scale']))/1000
-      #  self._dbusservice['/Ac/L2/Energy/Reverse'] = (meter_data['l2_export_energy_active']*(10**meter_data['energy_active_scale']))/1000
-      #  self._dbusservice['/Ac/L3/Energy/Reverse'] = (meter_data['l3_export_energy_active']*(10**meter_data['energy_active_scale']))/1000
        self._dbusservice['/Ac/Energy/Forward'] = (meter_data['energy_total']*(10**meter_data['energy_total_scale']))/1000
-      #  self._dbusservice['/Ac/Energy/Reverse'] = self._dbusservice['/Ac/L1/Energy/Reverse'] + self._dbusservice['/Ac/L2/Energy/Reverse'] + self._dbusservice['/Ac/L3/Energy/Reverse'] 
-       
-       #logging
-      #  logging.debug("House Consumption (/Ac/Power): %s" % (self._dbusservice['/Ac/Power']))
-      #  logging.debug("House Forward (/Ac/Energy/Forward): %s" % (self._dbusservice['/Ac/Energy/Forward']))
-      #  logging.debug("House Reverse (/Ac/Energy/Revers): %s" % (self._dbusservice['/Ac/Energy/Reverse']))
-      #  logging.debug("---");
        
        # increment UpdateIndex - to show that new data is available
        index = self._dbusservice['/UpdateIndex'] + 1  # increment index
@@ -230,22 +218,12 @@ class DbusSolarEdgeMeterService:
        #send data to DBus
        self._dbusservice['/Ac/Power'] = -meter_data['power'] # positive: consumption, negative: feed into grid
        self._dbusservice['/Ac/L1/Voltage'] = (meter_data['l1n_voltage']*(10**meter_data['voltage_scale']))
-       self._dbusservice['/Ac/L2/Voltage'] = (meter_data['l2n_voltage']*(10**meter_data['voltage_scale']))
-       self._dbusservice['/Ac/L3/Voltage'] = (meter_data['l3n_voltage']*(10**meter_data['voltage_scale']))
        self._dbusservice['/Ac/L1/Current'] = (meter_data['l1_current']*(10**meter_data['current_scale']))
-       self._dbusservice['/Ac/L2/Current'] = (meter_data['l2_current']*(10**meter_data['current_scale']))
-       self._dbusservice['/Ac/L3/Current'] = (meter_data['l3_current']*(10**meter_data['current_scale']))
        self._dbusservice['/Ac/L1/Power'] = -(meter_data['l1_power']*(10**meter_data['power_scale']))
-       self._dbusservice['/Ac/L2/Power'] = (meter_data['l2_power']*(10**meter_data['power_scale']))
-       self._dbusservice['/Ac/L3/Power'] = (meter_data['l3_power']*(10**meter_data['power_scale']))
        self._dbusservice['/Ac/L1/Energy/Forward'] = (meter_data['l1_import_energy_active']*(10**meter_data['energy_active_scale']))/1000
-       self._dbusservice['/Ac/L2/Energy/Forward'] = (meter_data['l2_import_energy_active']*(10**meter_data['energy_active_scale']))/1000
-       self._dbusservice['/Ac/L3/Energy/Forward'] = (meter_data['l3_import_energy_active']*(10**meter_data['energy_active_scale']))/1000
        self._dbusservice['/Ac/L1/Energy/Reverse'] = (meter_data['l1_export_energy_active']*(10**meter_data['energy_active_scale']))/1000
-       self._dbusservice['/Ac/L2/Energy/Reverse'] = (meter_data['l2_export_energy_active']*(10**meter_data['energy_active_scale']))/1000
-       self._dbusservice['/Ac/L3/Energy/Reverse'] = (meter_data['l3_export_energy_active']*(10**meter_data['energy_active_scale']))/1000
-       self._dbusservice['/Ac/Energy/Forward'] = self._dbusservice['/Ac/L1/Energy/Forward'] + self._dbusservice['/Ac/L2/Energy/Forward'] + self._dbusservice['/Ac/L3/Energy/Forward']
-       self._dbusservice['/Ac/Energy/Reverse'] = self._dbusservice['/Ac/L1/Energy/Reverse'] + self._dbusservice['/Ac/L2/Energy/Reverse'] + self._dbusservice['/Ac/L3/Energy/Reverse'] 
+       self._dbusservice['/Ac/Energy/Forward'] = self._dbusservice['/Ac/L1/Energy/Forward'] 
+       self._dbusservice['/Ac/Energy/Reverse'] = self._dbusservice['/Ac/L1/Energy/Reverse'] 
        
        #logging
        logging.debug("House Consumption (/Ac/Power): %s" % (self._dbusservice['/Ac/Power']))
@@ -309,20 +287,10 @@ def main():
           '/Ac/Voltage': {'initial': 0, 'textformat': _v},
           
           '/Ac/L1/Voltage': {'initial': 0, 'textformat': _v},
-          '/Ac/L2/Voltage': {'initial': 0, 'textformat': _v},
-          '/Ac/L3/Voltage': {'initial': 0, 'textformat': _v},
           '/Ac/L1/Current': {'initial': 0, 'textformat': _a},
-          '/Ac/L2/Current': {'initial': 0, 'textformat': _a},
-          '/Ac/L3/Current': {'initial': 0, 'textformat': _a},
           '/Ac/L1/Power': {'initial': 0, 'textformat': _w},
-          '/Ac/L2/Power': {'initial': 0, 'textformat': _w},
-          '/Ac/L3/Power': {'initial': 0, 'textformat': _w},
           '/Ac/L1/Energy/Forward': {'initial': 0, 'textformat': _kwh},
-          '/Ac/L2/Energy/Forward': {'initial': 0, 'textformat': _kwh},
-          '/Ac/L3/Energy/Forward': {'initial': 0, 'textformat': _kwh},
           '/Ac/L1/Energy/Reverse': {'initial': 0, 'textformat': _kwh},
-          '/Ac/L2/Energy/Reverse': {'initial': 0, 'textformat': _kwh},
-          '/Ac/L3/Energy/Reverse': {'initial': 0, 'textformat': _kwh},
         })
 
 

@@ -37,10 +37,11 @@ So what is the script doing:
 Thats it 😄
 
 ### Pictures
-![Tile Overview](img/venus-os-tile-overview.PNG)
-![Remote Console - Overview](img/venus-os-remote-console-overview.PNG) 
-![SmartMeter - Values](img/venus-os-shelly3em-smartmeter.PNG)
-![SmartMeter - Device Details](img/venus-os-shelly3em-smartmeter-devicedetails.PNG)
+![Tile Overview](img/venus-remote-console-SE-acin.png)
+![Remote Console - Devices](img/venus-remote-console-SE-devices.png) 
+![SolarEdge Meter](img/venus-remote-console-SE-meter.png)
+![SolarEdge PV Inverter](img/venus-remote-console-SE-PV-inv.png)
+
 
 
 

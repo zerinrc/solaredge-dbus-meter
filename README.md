@@ -16,25 +16,7 @@ The pourpose of this software is to integrate my SolarEdge HD-Wave SE6000H with 
 - RS485 CAN HAT for Raspberry
 - Custom 3D printed case for Raspberry + HAT + RJ45
 - Pylotech batts
-- modbus-proxy on docker container for multiple connections to SE inverter
-
-
-
-
-to be completed...
------
-### Details / Process
-As mentioned above the script is inspired by @RalfZim fronius smartmeter implementation.
-So what is the script doing:
-- Running as a service
-- connecting to DBus of the Venus OS `com.victronenergy.grid.http_40`
-- After successful DBus connection Shelly 3EM is accessed via REST-API - simply the /status is called and a JSON is returned with all details
-  A sample JSON file from Shelly 3EM can be found [here](docs/shelly3em-status-sample.json)
-- Serial/MAC is taken from the response as device serial
-- Paths are added to the DBus with default value 0 - including some settings like name, etc
-- After that a "loop" is started which pulls Shelly 3EM data every 750ms from the REST-API and updates the values in the DBus
-
-Thats it 😄
+- modbus-proxy on docker container for multiple connections to SE inverter 
 
 ### Pictures
 ![Tile Overview](img/venus-remote-console-SE-acin.png)
@@ -43,36 +25,8 @@ Thats it 😄
 ![SolarEdge PV Inverter](img/venus-remote-console-SE-PV-inv.png)
 
 
-
-
-
 ## Install & Configuration
-### Get the code
-Just grap a copy of the main branche and copy them to `/data/dbus-shelly-3em-smartmeter`.
-After that call the install.sh script.
-
-The following script should do everything for you:
-```
-wget https://github.com/fabian-lauer/dbus-shelly-3em-smartmeter/archive/refs/heads/main.zip
-unzip main.zip "dbus-shelly-3em-smartmeter-main/*" -d /data
-mv /data/dbus-shelly-3em-smartmeter-main /data/dbus-shelly-3em-smartmeter
-chmod a+x /data/dbus-shelly-3em-smartmeter/install.sh
-/data/dbus-shelly-3em-smartmeter/install.sh
-rm main.zip
-```
-⚠️ Check configuration after that - because service is already installed an running and with wrong connection data (host, username, pwd) you will spam the log-file
-
-### Change config.ini
-Within the project there is a file `/data/dbus-shelly-3em-smartmeter/config.ini` - just change the values - most important is the host, username and password in section "ONPREMISE". More details below:
-
-| Section  | Config vlaue | Explanation |
-| ------------- | ------------- | ------------- |
-| DEFAULT  | AccessType | Fixed value 'OnPremise' |
-| DEFAULT  | SignOfLifeLog  | Time in minutes how often a status is added to the log-file `current.log` with log-level INFO |
-| ONPREMISE  | Host | IP or hostname of on-premise Shelly 3EM web-interface |
-| ONPREMISE  | Username | Username for htaccess login - leave blank if no username/password required |
-| ONPREMISE  | Password | Password for htaccess login - leave blank if no username/password required |
-
+To be completed...
 
 
 ## Used documentation

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm /service/dbus-shelly-3em-smartmeter
-kill $(pgrep -f 'supervise dbus-shelly-3em-smartmeter')
-chmod a-x /data/dbus-shelly-3em-smartmeter/service/run
+rm /service/solaredge-dbus-meter
+kill $(pgrep -f 'supervise solaredge-dbus-meter')
+chmod a-x /data/solaredge-dbus-meter/service/run
 ./restart.sh

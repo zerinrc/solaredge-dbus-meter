@@ -18,6 +18,13 @@ The pourpose of this software is to integrate my SolarEdge HD-Wave SE6000H with 
 - Pylotech batts
 - modbus-proxy on docker container for multiple connections to SE inverter 
 
+###Installation
+Run following command from root shell on Venus OS:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/zerinrc/solaredge-dbus-meter/main/installfromscratch.sh)"
+```
+Edit config.yml
+
 ### Pictures
 ![Tile Overview](img/venus-remote-console-SE-acin.png)
 ![Remote Console - Devices](img/venus-remote-console-SE-devices.png) 

@@ -26,7 +26,6 @@ ln -s /data/solaredge-dbus-meter/service /service/solaredge-dbus-meter
 filename=/data/rcS.local
 if [ ! -f $filename ]
 then
-    echo "entra"
     touch $filename
     chmod 755 $filename
     echo "#!/bin/bash" >> $filename

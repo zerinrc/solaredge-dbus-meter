@@ -1,19 +1,24 @@
 #!/bin/bash
 
+opkg update
+opkg install python3-pip
+pip3 install pyyaml
+pip3 install solaredge_modbus
+
 # set permissions for script files
-chmod a+x /data/dbus-shelly-3em-smartmeter/restart.sh
-chmod 744 /data/dbus-shelly-3em-smartmeter/restart.sh
+chmod a+x /data/solaredge-dbus-meter/restart.sh
+chmod 744 /data/solaredge-dbus-meter/restart.sh
 
-chmod a+x /data/dbus-shelly-3em-smartmeter/uninstall.sh
-chmod 744 /data/dbus-shelly-3em-smartmeter/uninstall.sh
+chmod a+x /data/solaredge-dbus-meter/uninstall.sh
+chmod 744 /data/solaredge-dbus-meter/uninstall.sh
 
-chmod a+x /data/dbus-shelly-3em-smartmeter/service/run
-chmod 755 /data/dbus-shelly-3em-smartmeter/service/run
+chmod a+x /data/solaredge-dbus-meter/service/run
+chmod 755 /data/solaredge-dbus-meter/service/run
 
 
 
 # create sym-link to run script in deamon
-ln -s /data/dbus-shelly-3em-smartmeter/service /service/dbus-shelly-3em-smartmeter
+ln -s /data/solaredge-dbus-meter/service /service/solaredge-dbus-meter
 
 
 
@@ -27,4 +32,4 @@ then
     echo >> $filename
 fi
 
-grep -qxF '/data/dbus-shelly-3em-smartmeter/install.sh' $filename || echo '/data/dbus-shelly-3em-smartmeter/install.sh' >> $filename
+grep -qxF '/data/solaredge-dbus-meter/install.sh' $filename || echo '/data/solaredge-dbus-meter/install.sh' >> $filename

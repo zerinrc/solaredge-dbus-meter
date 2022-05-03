@@ -5,7 +5,15 @@ El autor no se responsabiliza en ningun caso, de posibles daños ocasionados sob
 
 
 ### Habilitar Modbus TCP en SolarEdge
-Habilitar Modbus tcp en solaredge, y asignar IP fija o reservar en el DHCP.
+Si no disponemos de cuenta de instalador o setApp, podemos acceder directamnte a la configuración del inversor creando una red wifi local. Para ello:
+- Mover palanca roja a la izquierda (posición P un par de segundos)
+- conectar a la red wifi que crea el inversor. La password está en el lateral derecho junto a un QR
+- una vez conectados a la wifi del inversor acceder con un navegador a la dirección http://172.16.0.1
+- la wifi que crea se cierra sola cuando pasa un tiempo sin un cliente conectado y hay que volver a empezar en caso necesario
+
+Una vez dentro de la aplicacion web, hay que habilitar el Modbus TCP en el apartado de Comunicaciones>Modbus TCP port>Habilitar>Puerto 502 (por defecto viene 1502, puede usarse cualquiera de ellos, pero para conectarnos a el, luego habrá que especificar el mismo puerto)
+
+Es recomendable asignar una IP fija dentro del apartado de comunicaciones, o bien reservar una en el DHCP de nuestra red local.
 
 ### Habilitar SSH en Venus OS
 Obtener root en el dispositivo venus (cerbo, color control, rasperry... etc)
@@ -25,34 +33,3 @@ Instalar el software desde el repositorio de GitHub, introduciendo la siguiente 
 Editar fichero config.yml con los parametros de nuestro inversor solar edge
 Reiniciar dispositivo Venus
 
-
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zerinrc/solaredge-dbus-meter/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

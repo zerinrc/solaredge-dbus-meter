@@ -1,8 +1,7 @@
-## Welcome to GitHub Pages
-test1
-You can use the [editor on GitHub](https://github.com/zerinrc/solaredge-dbus-meter/edit/gh-pages/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Conector SolarEdge + Victron
+### Declinación de responsabilidad.
+Tanto el proyecto de software, como esta guia son con fines educativos y en ningun caso debe utilizarse en un entorno de producción real.
+El autor no se responsabiliza en ningun caso, de posibles daños ocasionados sobre ningun hardware, software, bienes, configuración, etc, ni de daños personales, por el uso de este software o guia.
 
 ### Markdown
 

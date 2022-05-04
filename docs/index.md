@@ -25,29 +25,33 @@ Introducir nueva contraseña para root
 Activar ssh en lan
 
 
-#### General
+1. General
 ![Configuracion General](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_02.png)
-#### Nivel de acceso
+2. Nivel de acceso
 ![Nivel de acceso](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_03.png)
-#### Pulsar 5 segundos la flecha derecha
+3. Pulsar 5 segundos la flecha derecha
 ![Pulsar 5 segundos la flecha derecha](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_04.png)
-
+4. En Set root password introducir la contraseña para root que deseemos.
 ![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_05.png)
 
 ![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_06.png)
-
+5. Activar SSH en LAN
 ![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_07.png)
 
 
-
-Acceder por ssh como root y la password previamente introducida en el dispositivo Venus.
+Ahora ya podemos acceder por SSH con el usuario root y la password introducida en el paso 5.
 
 ### Instalación del conector en el dispositivo Venus
-Instalar el software desde el repositorio de GitHub, introduciendo la siguiente secuencia de comandos:
+Accederemos por SSH con el usuario root y la password fijada anteriormente en el paso 5, y ejecutaremos el siguiente comando:
+
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/zerinrc/solaredge-dbus-meter/main/installfromscratch.sh)"
 ```
 
 Editar fichero config.yml con los parametros de nuestro inversor solar edge
-Reiniciar dispositivo Venus
+
+Reiniciar dispositivo Venus haciendo
+```
+# reboot
+```
 

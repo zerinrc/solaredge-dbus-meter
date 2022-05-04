@@ -16,18 +16,20 @@ Una vez dentro de la aplicacion web, hay que habilitar el Modbus TCP en el apart
 Es recomendable asignar una IP fija dentro del apartado de comunicaciones, o bien reservar una en el DHCP de nuestra red local.
 
 ### Habilitar SSH en Venus OS
-Obtener root en el dispositivo venus (cerbo, color control, rasperry... etc)
 Configuracion>General>Nivel de acceso
+
 Pulsar cinco segundos flecha derecha hasta que aparezca la opcion de introducir password
+
 Introducir nueva contraseña para root
+
 Activar ssh en lan
 
 
-
+#### General
 ![Configuracion General](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_02.png)
-
+#### Nivel de acceso
 ![Nivel de acceso](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_03.png)
-
+#### Pulsar 5 segundos la flecha derecha
 ![Pulsar 5 segundos la flecha derecha](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_04.png)
 
 ![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_05.png)

@@ -24,17 +24,17 @@ Activar ssh en lan
 
 
 
-![Configuracion General](../img/ssh_sp_02.png)
+![Configuracion General](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_02.png)
 
-![Nivel de acceso](../img/ssh_sp_03.png)
+![Nivel de acceso](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_03.png)
 
-![Pulsar 5 segundos la flecha derecha](../img/ssh_sp_04.png)
+![Pulsar 5 segundos la flecha derecha](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_04.png)
 
-![Tile Overview](../img/ssh_sp_05.png)
+![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_05.png)
 
-![Tile Overview](../img/ssh_sp_06.png)
+![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_06.png)
 
-![Tile Overview](../img/ssh_sp_07.png)
+![Tile Overview](https://github.com/zerinrc/solaredge-dbus-meter/raw/main/img/ssh_sp_07.png)
 
 
 

@@ -24,12 +24,12 @@ Activar ssh en lan
 
 
 
-![Configuracion General](img/ssh_sp_02.png)
-![Nivel de acceso](img/ssh_sp_03.png)
-![Pulsar 5 segundos la flecha derecha](img/ssh_sp_04.png)
-![Tile Overview](img/ssh_sp_05.png)
-![Tile Overview](img/ssh_sp_06.png)
-![Tile Overview](img/ssh_sp_07.png)
+![Configuracion General](../img/ssh_sp_02.png)
+![Nivel de acceso](../img/ssh_sp_03.png)
+![Pulsar 5 segundos la flecha derecha](../img/ssh_sp_04.png)
+![Tile Overview](../img/ssh_sp_05.png)
+![Tile Overview](../img/ssh_sp_06.png)
+![Tile Overview](../img/ssh_sp_07.png)
 
 
 Acceder por ssh como root y la password previamente introducida en el dispositivo Venus.

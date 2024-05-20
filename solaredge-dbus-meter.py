@@ -31,13 +31,15 @@ import dbus.service
 import solaredge_modbus
 
 import paho.mqtt.client as mqtt
-import yaml
+#import yaml
 import json
 
+CFG_HOST="192.168.192.168"
+CFG_PORT="502"
 CFG_PATH='/data/solaredge-dbus-meter/config.yml'
 
-with open(CFG_PATH, 'r') as ymlfile:
-    cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
+#with open(CFG_PATH, 'r') as ymlfile:
+#    cfg = yaml.load(ymlfile, Loader=yaml.FullLoader)
 
 
 # our own packages from victron
@@ -63,7 +65,7 @@ class DbusSolarEdgePVInverterService:
   def __init__(self, servicename, deviceinstance, paths, productname='SolarEdge PV Inv', connection='SolarEdge Inverter Modbus service'):
 
 
-    self._meter = solaredge_modbus.Inverter(host=cfg['solaredge']['host'], port=cfg['solaredge']['port'])
+    self._meter = solaredge_modbus.Inverter(host=CFG_HOST, port=CFG_PORT)
     self._meter.connect()
 
     self._dbusservice = VeDbusService("{}.http_{:02d}".format(servicename, deviceinstance), dbusconnection())
@@ -155,7 +157,7 @@ class DbusSolarEdgeMeterService:
   def __init__(self, servicename, deviceinstance, paths, productname='SolarEdge Meter', connection='SolarEdge Meter Modbus service'):
 
 
-    self._meter = solaredge_modbus.Meter(host=cfg['solaredge']['host'], port=cfg['solaredge']['port'])
+    self._meter = solaredge_modbus.Meter(host=CFG_HOST, port=CFG_PORT)
     self._meter.connect()
 
     self._dbusservice = VeDbusService("{}.http_{:02d}".format(servicename, deviceinstance), dbusconnection())

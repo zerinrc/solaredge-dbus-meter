@@ -2,8 +2,9 @@
 
 opkg update
 opkg install python3-pip
-pip3 install pyyaml
-pip3 install solaredge_modbus
+#pip3 install pyyaml
+pip3 install pymodbus==2.5.3
+pip3 install solaredge_modbus==0.7.0
 
 # set permissions for script files
 chmod a+x /data/solaredge-dbus-meter/restart.sh
